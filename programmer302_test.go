@@ -8,7 +8,7 @@ import (
 )
 
 func TestSymLenth( t *testing.T)  {
-	fileString := "C:\\Users\\BHARRELL\\GolangProjects\\src\\github.com\\branh0913\\ProgrammerChallenge305\\element.csv"
+	fileString := "element.csv"
 
 	lst := main.GetAtomicSymLen(fileString, 1)
 

@@ -6,6 +6,7 @@ import (
 	"encoding/csv"
 	"strings"
 	"bufio"
+	"runtime"
 )
 
 func GetAtomicSymLen(fileName string, symLen int) []map[string]string {
@@ -62,8 +63,23 @@ func MatchSingle(singeStr string, singleEvalMap []map[string]string ) string {
 
 func main() {
 
-	inputString := "C:\\Users\\BHARRELL\\GolangProjects\\src\\github.com\\branh0913\\ProgrammerChallenge305\\input.txt"
-	fileString := "C:\\Users\\BHARRELL\\GolangProjects\\src\\github.com\\branh0913\\ProgrammerChallenge305\\element.csv"
+	currentWD, _ := os.Getwd()
+
+	var inputString string
+	var fileString string
+
+	if runtime.GOOS == "windows"{
+		inputString = currentWD + "\\src\\github.com\\branh0913\\DailyProgrammerChallenge302\\input.txt"
+		fileString =  currentWD + "\\src\\github.com\\branh0913\\DailyProgrammerChallenge302\\element.csv"
+	}
+
+	if runtime.GOOS == "linux"{
+		inputString = currentWD + "/src/github.com/branh0913/DailyProgrammerChallenge302/input.txt"
+		fileString =  currentWD + "/src/github.com/branh0913/DailyProgrammerChallenge302/element.csv"
+
+	}
+
+
 
 
 
