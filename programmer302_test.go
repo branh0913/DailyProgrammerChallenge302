@@ -3,7 +3,7 @@ package main_test
 
 
 import (
-	"github.com/branh0913/ProgrammerChallenge305"
+	"github.com/branh0913/DailyProgrammerChallenge302"
 	"testing"
 )
 
